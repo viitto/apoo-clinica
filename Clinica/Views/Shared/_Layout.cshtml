@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+          charset="utf-8" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="page-header bg-danger">
+                <h1>
+                    Desenvolvimento agora pouco
+                    <small class="text-danger">
+                        Feito por Zé
+                    </small>
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 col-md-3 bg-success">
+                <ul class="nav nav-pills nav-stacked">
+                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                    <li role="presentation">
+                        @Html.ActionLink("Consultas", "Index", "Consultas")
+                    </li>
+                    <li role="presentation">
+                        @Html.ActionLink("Exames", "Index", "Exames")
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-9 col-md-9">
+                <br />
+                @RenderBody()
+            </div>
+        </div> <br />
+        <div class="row">
+            <div class="col-xs-12 col-md-12 bg-danger">
+                <small>Layout com Muito Amor</small>
+            </div>
+        </div>
+    </div>
+    <script src="@Url.Content("~/scripts/jquery-1.10.2.js")"></script>
+</body>
+</html>
